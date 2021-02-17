@@ -10,7 +10,7 @@
 <body><br><br>          <br>    <br><br>               
 <div   class="card bg-primary text-white shadow">
                                         <div class="card-body">
-                                                  
+                                       <h3 style="color:gray"  align="center">  Verser</h3>             
 
 <div class="container spacer">
 <form th:action="@{versser}"  method="get">
@@ -20,11 +20,11 @@
 <div class="container spacer">
 <form th:action="@{versser}"  method="get">
 <div class="form-group">
-<h3 style="color:gray"> Numero compte </h3>
+<h5 style="color:gray"> Numero de compte </h5>
 <input class="form-control" type="text" name="compte1" th:value="${compte1}"/>
-<h3 style="color:gray">  Montant a verser </h3>
+<h5 style="color:gray">  Montant a verser </h5>
 <input class="form-control" type="text" name="montant" th:value="${montant}" /><br>
-<button type="submitt" class="btn btn-secondary"> &nbsp;&nbsp; Versser &nbsp;&nbsp; </button>
+<button type="submitt" class="btn btn-secondary"> &nbsp;&nbsp; Verser &nbsp;&nbsp; </button>
 </div>
 </form> </div> </div>
 

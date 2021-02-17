@@ -11,7 +11,7 @@
 <br><br><br><br>
 <div   class="card bg-primary text-white shadow">
                                         <div class="card-body">
-                                           
+                                         <h3 style="color:gray"  align="center"> Virer</h3>      
                          
 
 <div class="container spacer">
@@ -21,11 +21,11 @@
 <div class="container spacer">
 <form th:action="@{virement}"  method="get">
 <div  class="form-group">
-<h3 style="color:gray">Numero compte 1 :</h3>
+<h5 style="color:gray">Numero de compte 1 :</h5>
 <input class="form-control"  type="text" name="compte1" th:value="${compte1}"/>
-<h3 style="color:gray">  Numero compte 2 :</h3>
+<h5 style="color:gray">  Numero de compte 2 :</h5>
 <input  class="form-control" type="text" name="compte2" th:value="${compte2}"/>
-<h3 style="color:gray"> Montant :</h3>
+<h5 style="color:gray"> Montant :</h5>
 <input class="form-control"  type="text" name="montant" th:value="${montant}" /><br>
 <button type="submitt" class="btn btn-secondary"> &nbsp;&nbsp;  Virer &nbsp;&nbsp; </button>
 </div>

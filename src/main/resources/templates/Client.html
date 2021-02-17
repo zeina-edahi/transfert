@@ -10,10 +10,10 @@
 <body>
 <div   class="card bg-primary text-white shadow">
                                         <div class="card-body"> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-                                          <a  style="color: rgb(0, 204, 0); font-size:20px" th:href="@{formcompte}">Ajouter Compte</a> &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                                         
                                          &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
-                                         <a style="color: rgb(255, 128, 0);font-size:20px" th:href="@{form}">Ajouter Client</a> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-                                        <a style="color: rgb(0, 0, 255);font-size:20px" th:href="@{compte}">consulter le Compte </a>
+                                    &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;    &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;     <a style="color: rgb(0, 204, 0);font-size:20px" th:href="@{form}">Ajouter un Client</a> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                                        <a style="color: rgb(0, 0, 255);font-size:20px" th:href="@{compte}">consulter les Comptes </a>
                                       <br>     
 </div></div>
 
@@ -22,7 +22,7 @@
 <table class="table table-striped">
 <thead>
 <tr>
- <th>Id</th><th>Nom</th> <th>Prenom</th> <th>Email</th> <th>Telephone</th>    <th>Supprimer</th> <th>Editer</th>  
+ <th>Id</th><th>Nom</th> <th>Prenom</th> <th>Email</th> <th>Telephone</th>    <th>Supprimer</th> <th>Editer</th>  <th>Creation d'un Compte</th> 
  </tr>
  </thead>
  <tbody>
@@ -35,7 +35,7 @@
 <td th:text="${c.telephone}"> </td>
 <td> <button> <a onclick="return confirm('Are you sure ?')" th:href="@{supprimer(id=${c.id})}">Supprimer</a> </button></td>
 <td> <button > <a th:href="@{edit(id=${c.id})}">Changer</a> </button></td>
-
+<td> <button > <a th:href="@{editformcompte(id=${c.id})}">Ajouter Compte</a> </button></td>
  </tr>
 
  

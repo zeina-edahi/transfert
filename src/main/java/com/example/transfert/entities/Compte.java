@@ -17,13 +17,8 @@ private long montant;
 @JoinColumn(name="idC")
 
 private Client client;
-private int clientid;
-public int getClientid() {
-	return clientid;
-}
-public void setClientid(int clientid) {
-	this.clientid = clientid;
-}
+
+
 public Client getClient() {
 	return client;
 }
@@ -40,12 +35,7 @@ public Compte(String num, long montant ) {
 	this.montant = montant;
 		
 }
-public Compte(String num, long montant,int clientid ) {
-	//super();
-	this.num = num;
-	this.montant = montant;
-	this.clientid=clientid;	
-}
+
 public String getNum() {
 	return num;
 }

@@ -1,6 +1,7 @@
 package com.example.transfert.entities;
 
 
+import java.util.Collection;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -22,12 +23,12 @@ private String email;
 private String telephone;
 
 @OneToMany(mappedBy ="client")
-private List<Compte> comptes;
+private Collection<Compte> comptes;
 
-public List<Compte> getComptes() {
+public  Collection<Compte> getComptes() {
 	return comptes;
 }
-public void setComptes( List<Compte> comptes) {
+public void setComptes( Collection<Compte> comptes) {
 	this.comptes = comptes;
 }
 

@@ -8,40 +8,41 @@
 <title>Edit Client</title>
 </head>
 <body>
+<br><br>
 <div class="col-md-6 col-sm-6 col-xs-12 col-md-offest-3">
 <div class="panel panel-default " >
-  <div class="panel-heading "> <h2 style="color:gray"   Modifier les  Information</h2> </div>
+  <div class="panel-heading "> <h3 style="color:gray" >  Modifier les  Informations</h3> </div>
   <div class="panel-body">
- 
+ <br>
     <form th:action="@{UpdateClient}"  method="post" th:object="${Client}">
   
     <div class="form-group">
-  <h4 style="color:gray"> ID:</h4>
+  <h5 style="color:gray"> ID:</h5>
   <input type="text" th:field="*{id}" class="form-control"/>
   <span></span> 
   </div>
   <div class="form-group">
-  <h4 style="color:gray"> First Name:</h4>
+  <h5 style="color:gray"> Nom :</h5>
   <input type="text" th:field="*{nom}" class="form-control"/>
   <span></span>
    </div>
    <div class="form-group">
-  <label class="control-label">last Name:</label>
+<h4 style="color:gray"> Prenom:</h5>
   <input type="text" th:field="*{prenom}" class="form-control"/>
   <span></span>
    </div>
     
     <div class="form-group">
-  <h4 style="color:gray">Email:</h4>
+  <h5 style="color:gray">Email:</h5>
   <input type="text" th:field="*{email}" class="form-control"/>
   <span></span>
    </div>
    <div class="form-group">
-  <h4 style="color:gray">Telephone: </h4>
+  <h5 style="color:gray">Telephone: </h5>
   <input type="text" th:field="*{telephone}" class="form-control"/>
   <span></span>
    </div> <br>
-   <div><button type="submit" class="btn btn-secondary">Save Client</button></div>
+   <div><button type="submit" class="btn btn-secondary">Sauvegarder</button></div>
   </form>
   </div>
   </div>

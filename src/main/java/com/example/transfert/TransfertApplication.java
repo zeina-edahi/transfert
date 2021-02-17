@@ -38,15 +38,21 @@ public class TransfertApplication {
 		cr.addCompte(new Compte("1237",45000),3L);
 		cr.addCompte(new Compte("1238",70000),4L);
 		cr.addCompte(new Compte("1239",70000),5L);
-		//Page<Client> ct =cr.findAll(new QPageRequest(0, 5));
-		//ct.forEach(e->System.out.println(e.getNom()+"  "+e.getPrenom()+"  "+e.getEmail()+"  "+e.getTelephone()));
-		//System.out.println("--------------------------------------------------------------");
-		//Page<Client> ct1 =cr.chercherClients("ek",new QPageRequest(0, 5));
-		//ct1.forEach(e->System.out.println(e.getNom()));
-		//System.out.println("--------------------------------------------------------------");
-		//List<Compte> co =cr1.findAll();
-		//co.forEach(e->System.out.println(e.getNum()+"  "+e.getMontant()+"  "+e.getClient()));
-		
+		cr.addCompte(new Compte("1240",35000),2L);
+		cr.addCompte(new Compte("1241",46000),3L);
+		cr.addCompte(new Compte("1242",340000),4L);
+		cr.addCompte(new Compte("12430",230000),2L);
+		cr.addCompte(new Compte("12440",500000),3L);
+		cr.addCompte(new Compte("12450",100000),5L);
+
+		cr.addCompte(new Compte("12",340000),4L);
+		cr.addCompte(new Compte("13",230000),2L);
+		cr.addCompte(new Compte("14",500000),3L);
+		cr.addCompte(new Compte("15",100000),5L);
+		cr.addCompte(new Compte("142",340000),4L);
+		cr.addCompte(new Compte("143",230000),2L);
+		cr.addCompte(new Compte("144",500000),3L);
+		cr.addCompte(new Compte("1245",100000),5L);
 		
 		
 	}

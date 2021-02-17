@@ -10,10 +10,10 @@
 <body>
 <div   class="card bg-primary text-white shadow">
                                         <div class="card-body"> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-                                          <a  style="color: rgb(20, 21, 23); font-size:20px" th:href="@{retir}">Retirer</a> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                                          <a  style="color: rgb(0, 128, 64); font-size:25px" th:href="@{retir}">Retirer</a> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
                                          &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-                                         <a style="color: rgb(20, 21, 23);font-size:20px" th:href="@{vers}">Verser</a> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-                                        <a style="color: rgb(20, 21, 23);font-size:20px" th:href="@{vir}">Virer </a>
+                                         <a style="color: rgb(0, 0, 255);font-size:25px" th:href="@{vers}">Verser</a> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                                        <a style="color: rgb(128, 128, 192);font-size:25px" th:href="@{vir}">Virer </a>
                                       <br>     
 </div></div>
  <br> 
@@ -31,7 +31,7 @@
  <tr th:each="c:${Comptes}"  >
 <td  th:text="${c.num}"> </td>
 <td th:text="${c.montant}"> </td>
-<td th:text="${c.clientid}"> </td>
+<td th:text="${c.Client.id}"> </td>
 
 
 
@@ -43,7 +43,7 @@
 <div class="container">
 <ul class="nav nav-pills">
 <li th:each="p:${pages}" class="active" >
-<a th:text="${p}" th:href="@{Compte}"></a>
+<a th:text="${p}" th:href="@{compte(p=${p})}"></a>
 </li>
 </ul>
 </div>

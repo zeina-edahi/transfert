@@ -39,8 +39,6 @@ private ClientRepository clientrepository;
 	
 	@RequestMapping("/index")
 	public String index(Model model ,@RequestParam(name="page",defaultValue="0")int p) {
-	//Page<Client> lc = clientrepository.chercherClients("%"+mc+"%", new  QPageRequest(p,10));
-		//Page<Client> lc = clientrepository.chercherClients(mc, new   QPageRequest(p, 5));
 		Page<Client> lc = clientrepository.findAll(new QPageRequest(p,100));
 		int pC=lc.getTotalPages();
 		int[] pages = new int[pC];
@@ -98,11 +96,11 @@ private ClientRepository clientrepository;
 	   
 	   
 	   @RequestMapping("/compte")
-		public String compte(Model model,@RequestParam(name="page",defaultValue="0")int c){
+		public String compte(Model model,@RequestParam(name="page",defaultValue="0")int p){
 		   
-			@SuppressWarnings("deprecation")
-			Page<Compte> pagecomptes = compterepository.findAll(new QPageRequest(c,10));
-			Page<Compte> pagecompte = compterepository.findAll(new QPageRequest(c, 2));
+			//@SuppressWarnings("deprecation")
+			Page<Compte> pagecomptes = compterepository.findAll(new QPageRequest(p,100));
+		//	Page<Compte> pagecompte = compterepository.findAll(new QPageRequest(p, 2));
 			int pagescount=pagecomptes.getTotalPages();
 			int[] pages = new int[pagescount];
 			for(int i=0;i<pagescount;i++)pages[i]=i;
@@ -170,6 +168,25 @@ private ClientRepository clientrepository;
 		model.addAttribute("Compte", new Compte());
 		return "formcompte";
 		}
+	   
+	   @RequestMapping(value="/editformcompte",method= RequestMethod.GET )
+		 public String editformcompte(long id, Model model,Compte compte) {
+		 
+		   Client client1 = clientrepository.getOne(id);
+		 //  Client client = clientrepository.getOne(id);
+		   model.addAttribute("Client", client1);
+		   return "editformcompte";
+		   
+	 }
+	   
+	   @RequestMapping(value="/UpdateCompte" , method= RequestMethod.POST)
+	 		public String updatecompte(long id ,Compte compte){
+	 		 
+	 		  Client client1 = clientrepository.getOne(id);
+	 		 compte.setClient(client1);
+	 		compterepository.save(compte);
+	 		return "redirect:compte";
+	 		   }
 }
 	
 	

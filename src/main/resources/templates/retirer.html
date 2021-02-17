@@ -12,16 +12,16 @@
 <div   class="card bg-primary text-white shadow">
                                         <div class="card-body">
                                            
-                      
+                    <h3 style="color:gray" align="center" > Retirer</h3>    
 
 <div class="container spacer">
 <form th:action="@{retirer}"  method="get">
 <div class="panel panel-heading"></div>
-<br> 
+
 <div class="form-group">
- <h3 style="color:gray"> Numero compte </h3>
+ <h5 style="color:gray"> Numero de compte </h5>
 <input class="form-control" type="text" name="compte1" th:value="${compte1}"/>
- <h3 style="color:gray">  Montant a retirer:</h3>
+ <h5 style="color:gray">  Montant a retirer:</h5>
 <input  class="form-control" type="text" name="montant" th:value="${montant}" />
 <br>
 <button type="submitt" class="btn btn-secondary" > &nbsp;&nbsp; Retirer &nbsp;&nbsp; </button> 
