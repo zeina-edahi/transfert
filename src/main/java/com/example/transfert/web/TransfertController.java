@@ -75,12 +75,9 @@ private ClientRepository clientrepository;
 	   }
 	   @RequestMapping(value="/edit" )
 		 public String edit(long id, Model model) {
-		 //  Client client = clientrepository.findById(id);
+		 
 		   Client client1 = clientrepository.getOne(id);
-		 //  Client client = clientrepository.getOne(id);
-		//   Client client = clientrepository.getOne();
-		 //  model.addAttribute("Client", client);
-		  // model.addAttribute("Client", client);
+		 
 		   model.addAttribute("Client", client1);
 		   return "editform";
 		   

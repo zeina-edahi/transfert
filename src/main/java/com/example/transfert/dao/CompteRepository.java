@@ -36,7 +36,8 @@ public void deleteById(@Param("x")long id)	;
 	  @Transactional @Query(value="select e from Compte e where e.num like :x" ,nativeQuery=true)
 	public Page<Compte> chercherCompte(@Param("x")String mc,Pageable pageable);
 	
-	
+		@Query("select e from Compte e where e.client.id=:x")
+		public Compte getOnecompte(@Param("x")long id);
 	
 	
 

@@ -49,23 +49,4 @@ public void setMontant(long l) {
 	this.montant = l;
 }
 
-
-
-public void verser(Compte compte, long montant) {
-	compte.montant= compte.montant+montant;
-	
-}
-public void retirer(Compte compte, long montant) {
-	compte.montant= compte.montant-montant;
-	
-}
-public void virement(Compte compte1, Compte compte2, long montant) {
-
-	if (compte1.equals(compte2)) {
-		throw new RuntimeException("Impossibile de faire un virement sur le même compte");
-	}
-
-	retirer(compte1, montant);
-	verser(compte2, montant);
-}
 }
